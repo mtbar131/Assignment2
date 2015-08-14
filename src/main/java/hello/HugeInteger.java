@@ -164,7 +164,7 @@ public class HugeInteger {
 
         System.out.println("H1 is " + h1 + "H2 is " + h2);
         System.out.println(h1.isMagnitudeGreaterThan.test(h2));
-        if (h1.isLessThan.test(h2)) {
+        if (!(h1.isMagnitudeGreaterThan.test(h2))) {
             ans.setSign(-1);
             HugeInteger temp = h1;
             h1 = h2;
@@ -268,11 +268,11 @@ public class HugeInteger {
     }
 
 
-    /*public static void main(String args[]) {
+    public static void main(String args[]) {
         HugeInteger h1 = new HugeInteger("2000");
-        HugeInteger h2 = new HugeInteger("22000");
+        HugeInteger h2 = new HugeInteger("-22000");
         HugeInteger h3 = HugeInteger.add(h1, h2);
-        System.out.println(h3.toString());
+        System.out.println(h1.isGreaterThan.test(h2));
 
       /* Predicates:
     isEqualTo,
@@ -286,9 +286,9 @@ public class HugeInteger {
         //System.out.println(new HugeInteger("1500").isLessThan.test(new HugeInteger("1500")));
         //System.out.println(new HugeInteger("15000").isLessThan.test(new HugeInteger("1500")));
         //System.out.println(new HugeInteger("1500").isLessThanEqualTo.test(new HugeInteger("1500")));
+       */
 
-
-    }*/
+    }
 }
 
 
