@@ -162,8 +162,8 @@ public class HugeInteger {
     private static HugeInteger subtractUtil(HugeInteger h1, HugeInteger h2) {
         HugeInteger ans = new HugeInteger();
 
-        System.out.println("H1 is " + h1 + "H2 is " + h2);
-        System.out.println(h1.isMagnitudeGreaterThan.test(h2));
+
+
         if (!(h1.isMagnitudeGreaterThan.test(h2))) {
             ans.setSign(-1);
             HugeInteger temp = h1;
@@ -171,7 +171,7 @@ public class HugeInteger {
             h2 = temp;
         }
 
-        System.out.println("H1 is " + h1 + "H2 is " + h2);
+
 
         int i = 1;
         int j = 1;
@@ -184,7 +184,7 @@ public class HugeInteger {
 
         int borrow = 0;
         while (i <= h1.getNumberOfDigits() || j <= h2.getNumberOfDigits()) {
-            System.out.println("digit1: " + digits1[MAX_LENGTH - i] + "digit2:" + digits2[MAX_LENGTH - j] + " borrow:" + borrow);
+
             if ((digits1[MAX_LENGTH - i] - borrow) < digits2[MAX_LENGTH - j]) {
                 digitsAns[k] = (digits1[MAX_LENGTH - i] + 10) - digits2[MAX_LENGTH - j];
                 borrow = 1;
@@ -202,7 +202,7 @@ public class HugeInteger {
             i++;
         }
         ans.setNumberOfDigits(MAX_LENGTH - i);
-        System.out.println("returning : " + ans);
+
         return ans;
     }
 
