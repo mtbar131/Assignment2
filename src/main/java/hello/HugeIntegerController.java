@@ -46,4 +46,9 @@ import org.springframework.web.bind.annotation.RestController;
     public boolean HugeIntegerisZero(@RequestParam(value="number1", defaultValue="100") String num1) {
         return new HugeInteger(num1).isZero.test(new HugeInteger(num1));
     }
+
+    @RequestMapping("/isequal")
+    public boolean HugeIntegerisEqual(@RequestParam(value="number1", defaultValue="100") String num1, @RequestParam(value = "number2", defaultValue = "100") String num2) {
+        return new HugeInteger(num1).isEqual.test(new HugeInteger(num2));
+    }
 }

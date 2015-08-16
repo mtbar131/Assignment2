@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script>
+        function addtextBoxes(a){
+
+            $.ajax({
+                type: "GET", 
+                url: "http://localhost:8080/add?number1=10&number2=11",
+                success: function(data){
+                    alert(data);
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Huge Integer REST web service</h1>
+    <hr>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select Action <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Add</a></li>
+            <li><a href="#">Subtract</a></li>
+            <li><a href="#">Greater Than</a></li>
+            <li><a href="#">Less Than</a></li>
+            <li><a href="#">Greater Than Equal to</a></li>
+            <li><a href="#">Less Than Equal to</a></li>
+            <li><a href="#">Equals</a></li>
+            <li><a href="#">Not Equals</a></li>
+        </ul>
+    </div>
+    <hr>
+    <h4>Number 1:</h4>
+    <div class="input-group input-group-lg col-lg-12">
+        <input type="text" class="form-control" placeholder="Number 1" aria-describedby="sizing-addon1">
+    </div>
+
+    <h4>Number 2:</h4>
+
+    <div class="input-group input-group-lg col-lg-12">
+        <input type="text" class="form-control" placeholder="Number 2" aria-describedby="sizing-addon1">
+    </div>
+
+    <hr>
+
+    <div class="btn-group-lg" role="group">
+        <button onclick="addtextBoxes()" type="button" class="btn btn-default col-lg-12">Get Answer</button>
+    </div>
+
+    <div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
